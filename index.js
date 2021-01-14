@@ -2,20 +2,19 @@
 exports = module.exports = trim;
 
 function trim(str){
-  if (str.trim) return str.trim();
-
   str = trimLeftSpaces(str);
   str = trimRightSpaces(str);
+  return str;
 }
 
 exports.left = function(str){
-  if (str.trimLeft) return str.trimLeft();
-  trimLeftSpaces(str);
+  str = trimLeftSpaces(str);
+  return str;
 };
 
 exports.right = function(str){
-  if (str.trimRight) return str.trimRight();
-  trimRightSpaces(str);
+  str = trimRightSpaces(str);
+  return str;
 };
 
 function trimLeftSpaces(str) {
